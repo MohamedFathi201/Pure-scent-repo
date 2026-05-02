@@ -809,8 +809,19 @@
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
+
+    /* ── Hero ── */
+    #hero { padding-top: 70px; }
+    .hero-bg-text { display: none; }
+
+    /* ── Collection section ── */
+    #collection { padding: 3rem 0; }
+    .section-header { margin-bottom: 2rem; padding: 0 1rem; }
+    #about { padding: 3rem 1.5rem; }
+
+    /* ── Slider name ── */
     .slider-name-center {
-      padding: 0 1rem 1rem;
+      padding: 0 1rem 0.75rem;
     }
     .slider-name-center .slider-name-text {
       font-size: clamp(1.4rem, 5vw, 2rem);
@@ -820,12 +831,14 @@
       letter-spacing: 0.25em;
       padding: 0.28rem 0.85rem;
     }
+
+    /* ── Slider layout ── */
     .perfume-display {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       flex-wrap: nowrap;
-      padding: 0 1rem;
+      padding: 0 0.75rem;
       min-height: auto;
       gap: 0;
     }
@@ -836,14 +849,33 @@
     .bottle-side.left {
       flex: 0 0 42%;
       text-align: center;
+      padding-top: 0;
     }
     .accords-panel {
       flex: 0 0 58%;
-      padding: 0.5rem 0.5rem 1rem 1rem;
+      padding: 0.5rem 0.5rem 1rem 0.75rem;
       transform: translateX(30px);
     }
     .accords-panel.visible { transform: translateX(0); }
-    .bottle-img { width: 130px; }
+    .bottle-img { width: 120px; }
+
+    /* ── Slider nav ── */
+    .slider-nav { margin-top: 1.5rem; gap: 1.25rem; padding-bottom: 1rem; }
+    .nav-arrow { width: 40px; height: 40px; font-size: 1rem; }
+
+    /* ── Accords action buttons — stack on mobile ── */
+    .accord-actions { flex-direction: column; gap: 0.6rem; }
+    .btn-add-cart, .btn-details {
+      width: 100%; padding: 0.7rem 0.8rem; font-size: 0.65rem;
+    }
+
+    /* ── Notes section ── */
+    .notes-group { min-width: 80px; }
+    .notes-section { margin-top: 0.75rem; }
+    .meta-row { gap: 1rem; }
+
+    /* ── Perfume price ── */
+    .perfume-price { font-size: 1.1rem; }
   }
 
   /* TOAST */
