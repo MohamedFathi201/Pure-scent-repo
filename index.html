@@ -244,17 +244,18 @@
   /* Centered perfume name above slider */
   .slider-name-center {
     text-align: center;
-    padding: 0 1rem 1.5rem;
+    padding: 0.5rem 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
   }
   .slider-name-center .slider-name-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 400;
     color: var(--dark);
     line-height: 1.2;
     display: block;
+    letter-spacing: 0.03em;
   }
   .slider-type-badge {
     display: inline-block;
@@ -264,10 +265,10 @@
     text-transform: uppercase;
     color: var(--gold-dark);
     border: 1px solid var(--gold);
-    padding: 0.35rem 1.1rem;
-    margin-top: 0.6rem;
-    background: rgba(212,175,55,0.07);
-    box-shadow: 0 0 0 3px rgba(212,175,55,0.12);
+    padding: 0.4rem 1.3rem;
+    margin-top: 0.75rem;
+    background: rgba(212,175,55,0.08);
+    box-shadow: 0 0 0 4px rgba(212,175,55,0.1);
   }
 
   /* Single perfume display */
@@ -384,10 +385,7 @@
   }
 
   .accords-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem; font-weight: 300;
-    color: var(--dark); margin-bottom: 1.5rem;
-    line-height: 1.1;
+    display: none;
   }
 
   .accords-grid {
@@ -1776,7 +1774,7 @@ function loadPerfume(idx, initial = false) {
   document.getElementById('perf-name').textContent = p.name;
   document.getElementById('perf-type').textContent = p.type;
   document.getElementById('perf-price').textContent = p.price + ' L.E';
-  document.getElementById('accord-title').textContent = p.name;
+  document.getElementById('accord-title').textContent = '';
 
   // Build accords
   const grid = document.getElementById('accords-grid');
